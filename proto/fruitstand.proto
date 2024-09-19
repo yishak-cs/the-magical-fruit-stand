@@ -1,0 +1,14 @@
+syntax="proto3";
+
+option go_package="github.com/yishak-cs/the-magical-fruit-stand";
+
+message FruitQuery{
+    string fruit_name = 1;
+}
+message FruitWisdom {
+    string wisdom = 1;
+}
+
+service FruitSage{
+    rpc AskAboutFruit(FruitQuery) returns (FruitWisdom) {}
+}
